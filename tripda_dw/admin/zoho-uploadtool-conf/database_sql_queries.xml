@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- $Id$ -->
+<Queries>
+  <!-- Specify select query if database type is other than mongodb -->
+  <Query dbname="Data Warehouse" tablename="bookings" importtype="TRUNCATEADD" matchingcols="" selectcols="" skiptop="">
+  SELECT
+  *
+  FROM
+  bookings
+  ORDER BY 1
+  </Query>
+
+  
+  <Query dbname="Data Warehouse" tablename="users" importtype="TRUNCATEADD" matchingcols="" selectcols="" skiptop="">
+  SELECT
+  *
+  FROM
+  users
+  ORDER BY 1
+  </Query>
+
+  <Query dbname="Data Warehouse" tablename="trips" importtype="TRUNCATEADD" matchingcols="" selectcols="" skiptop="">
+  SELECT
+  *
+  FROM
+  trips
+  ORDER BY 1
+  </Query>
+
+    <Query dbname="Data Warehouse" tablename="cube" importtype="TRUNCATEADD" matchingcols="" selectcols="" skiptop="">
+  SELECT
+  *
+  FROM
+  cube
+  ORDER BY 1
+  </Query>
+
+  
+  
+   <!-- If DB type is mongodb, Specify required parameters in <CollectionName>Name of the collection</CollectionName>, <FieldNames> field names separated by commas </FieldNames>, <FieldAliasMapping> field name:field alias name seperated by commas </FieldAliasMapping>, <Find>{ query to be execute }</Find> -->
+  <!--<Query dbname="DB1" tablename="mytable1" importtype="APPEND" matchingcols="" selectcols="" skiptop="">
+    <CollectionName>employeeDetail</CollectionName>
+    <FieldNames>name.firstName,name.lastName,dob,address.streetAddress,address.City,address.State,address.postalCode</FieldNames>
+    <FieldAliasMapping>name.firstName:firstName,name.lastName:lastName,address.streetAddress:streetAddress,address.City:city,address.State:state,address.postalCode:postalCode</FieldAliasMapping>
+    <Find>{dob:{$gt:{$date:"1989-04-02T10:28:48.382Z"}}}</Find>
+  </Query>
+  <Query dbname="DB1" tablename="mytable1" importtype="APPEND" matchingcols="" selectcols="" skiptop="">
+    <CollectionName>employeeDetail</CollectionName>
+    <FieldNames></FieldNames>
+    <FieldAliasMapping></FieldAliasMapping>
+    <Find>{dob:{$gt:{$date:"1989-04-02T10:28:48.382Z"}}}</Find>
+  </Query>-->
+  <!-- 
+    Explanation about <FieldNames></FieldNames> : 
+      If leaving blank or avoiding this element, then fieldnames will be generated from first 100 documents or records. If you wish to have field alias mapping, then it is necessary to provide fieldnames
+    Explanation about <FieldAliasMapping></FieldAliasMapping> :
+      On leaving this element as blank, will create the column names as such in FieldNames
+  -->
+</Queries>

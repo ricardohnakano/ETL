@@ -1,0 +1,3 @@
+/bin/bash /home/voliveira/UploadTool/bin/UploadFromDB.sh vitor.oliveira@tripda.com.br -A 8caebe0b55b6b68a1c091f3c113eca3f
+
+/home/voliveira/UploadTool/bin
